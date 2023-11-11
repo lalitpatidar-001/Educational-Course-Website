@@ -32,9 +32,10 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 1vw 8vw;
-
+    background-color: white;
     position: sticky;
     top: 0;
+    z-index: 100;
 
     box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
 }
@@ -66,6 +67,7 @@ nav div span{
 .nav-list li{
     padding: .2rem .3rem;
     cursor: pointer;
+    
 }
 
 
@@ -75,6 +77,7 @@ nav div span{
     font-size: 16px;
     font-weight: 600;
     transition: all ease .3s;
+  
 }
 .nav-list li:hover{
     background-color: gray;
@@ -88,7 +91,7 @@ nav div span{
 /* Home */
 
 .home-section{
-    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)), url("./images/bg-home-girl.jpg " );
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("./images/bg-home-girl.jpg " );
     background-position: center;
     background-size: cover;
     object-fit: cover;
@@ -110,15 +113,19 @@ nav div span{
     font-size: 2rem;
     text-align: center;
     width: 70%;
+    
+    animation: shiftMotionDown ease 2s 1;
+
 }
 .home-section p{
     font-weight: 500;
     width: 50%;
     line-height: 20px;
     text-align: center;
+    animation: shiftMotionUp ease 2s 1;
 }
 .home-section div{
-    
+    animation: buttonPopUp ease 4s 1;
 }
 .home-section div a{
     padding: .4rem .7rem ;
@@ -130,12 +137,24 @@ nav div span{
     text-decoration: none;
     cursor: pointer;
     transition: all ease 0.2s;
+
+    
+
+}
+.home-section div a:first-child{
+    animation: blink ease 1s infinite;
+
 }
 .home-section div a:first-child:hover{
-    color: #fdc93b;;
+    color: #fdc93b;
+}
+.home-section div a:last-child{
+  font-weight: 600;
+
 }
 .home-section div a:last-child:hover{
     color: rgb(21, 21, 100);
+
 }
 
 .home-section div :first-child{
@@ -143,4 +162,260 @@ nav div span{
 }
 .home-section div :last-child{
     background: #fdc93b;
+}
+
+/* Features */
+
+.feature-section{
+    margin-top: 20px;
+    margin: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+    gap: 10px;
+}
+.feature-section h1{
+ 
+}
+.feature-section p{
+    font-size: 18px;
+    font-weight: 400;
+
+}
+
+.features{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.features div{
+    width: 33%;
+    flex-basis: 300px;
+    padding: 1.5rem 3rem;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+
+    transition: ease .3s;
+
+}
+.features div:hover{
+    transform: scale(1.04);
+    box-shadow: 2px 2px 20px rgba(252, 201, 59, 0.3);
+    transform: translateY(-20px);
+    background-color: #fff;
+}
+
+.features div i{
+    font-size: 25px;
+    animation: blink ease 1s infinite;
+
+}
+
+
+/* Popularity */
+.popular-section{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 10px;
+}
+
+.courses{
+    margin-top: 20px;
+    margin:  0px 10px;
+    max-width: 1024px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+}
+
+.courses div{
+    padding: 10px 10px;
+    width: 33%;
+    border-radius: 5px;
+    flex-basis: 300px;
+    background-color: white;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.3);
+    transition: ease 0.3s;
+}
+.courses div:hover{
+    transform: translate(-15px , -15px);
+    box-shadow: 2px 2px 20px rgba(252, 201, 59, 0.3);
+}
+
+.courses div img{
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.courses div span{
+    color: gray;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.ratings i{
+    color: #fdc93b;
+}
+.no-of-ratings{
+    color: gray;
+    font-weight: 400;
+    font-size: 16px;
+
+}
+
+/* Registration */
+.registration-section{
+    margin-top: 30px;
+    display: flex;
+    height: 100vh;
+    padding: 10px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('./images/reg.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+
+
+}
+
+.right-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+
+}
+.right-div p{
+    align-items: center;
+    width: 50%;
+}
+
+.left-div{
+    display: flex;
+    height: 60%;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+
+
+}
+.left-div .form h3{
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.form {
+    background-color: #fff;
+    height: 90%;
+    display: flex;
+    border-radius: 8px;
+
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 40px;
+}
+
+.form input{
+    padding: 10px 20px;
+    border: 1.5px solid rgb(21, 21, 100);
+    border-radius: 3px;
+}
+.form input:focus{
+    border: 1.5px solid red;
+}
+
+.form button{
+    width: 70%;
+    background-color: #fdc93b;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    align-self: flex-start;
+    padding: 10px 10px;
+    transition: ease 0.3s;
+}
+
+.form button:hover{
+    background-color: rgb(21, 21, 100);
+
+}
+/* media query  */
+@media (max-width:720px) {
+    .registration-section{
+        flex-direction:column ;
+    }
+
+    
+}
+
+/* animation  */
+@keyframes blink {
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.4);
+        color: rgb(252, 201, 59);
+    }
+}
+@keyframes blinkBlue {
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.4);
+        color: rgb(21, 21, 100);
+    }
+}
+
+@keyframes shiftMotionUp {
+    0%{
+        transform: translate(100px , 100px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+@keyframes shiftMotionDown {
+    0%{
+        transform: translate(-100px , -100px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+
+@keyframes buttonPopUp {
+    
+    0%,20%,40%,60%,90%{
+           visibility: hidden;
+    }
+    95%{
+    }
+    100%{
+        transform: scale(1);
+
+    }
+
+    
 }
