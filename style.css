@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family?=Poppins:wght@@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins' , sans-serif;
+}
+
+/* global tags */
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(35, 35, 85);
+}
+span{
+    font-size: .9rem;
+    color: #757373;
+}
+h6{
+    font-size: 1.1rem;
+    color: rgb(24,24,49);
+}
+
+/* navigation */
+nav{
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 8vw;
+
+    position: sticky;
+    top: 0;
+
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+nav div{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+nav div span{
+    color: #fdc93b;
+    font-weight: 500;
+    font-size: 20px;
+}
+.logo{
+    height: 40px;
+
+}
+
+.nav-list{
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+
+
+}
+
+.nav-list li{
+    padding: .2rem .3rem;
+    cursor: pointer;
+}
+
+
+.nav-list li a{
+    text-decoration: none;
+    color:rgb(21, 21, 100);
+    font-size: 16px;
+    font-weight: 600;
+    transition: all ease .3s;
+}
+.nav-list li:hover{
+    background-color: gray;
+}
+
+.nav-list li:hover a{
+    color: #fdc93b;
+
+}
+
+/* Home */
+
+.home-section{
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)), url("./images/bg-home-girl.jpg " );
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    height: calc(98vh - 40px);
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+
+    color: white;
+
+}
+
+.home-section h2{
+    /* color: rgba(0, 0, 0, 1); */
+    font-size: 2rem;
+    text-align: center;
+    width: 70%;
+}
+.home-section p{
+    font-weight: 500;
+    width: 50%;
+    line-height: 20px;
+    text-align: center;
+}
+.home-section div{
+    
+}
+.home-section div a{
+    padding: .4rem .7rem ;
+    border-radius: .2rem;
+    border: none;
+    color: inherit;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+.home-section div a:first-child:hover{
+    color: #fdc93b;;
+}
+.home-section div a:last-child:hover{
+    color: rgb(21, 21, 100);
+}
+
+.home-section div :first-child{
+    background: rgb(21, 21, 100);
+}
+.home-section div :last-child{
+    background: #fdc93b;
+}
