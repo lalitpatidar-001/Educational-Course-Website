@@ -58,6 +58,10 @@ nav div span{
       font-size: 22px;
 
 }
+.menu-bar{
+    display: none;
+  
+}
 
 .nav-list{
     display: flex;
@@ -89,6 +93,38 @@ nav div span{
 .nav-list li:hover a{
     color: #fdc93b;
 
+}
+/* navbar media query */
+@media (max-width:720px) {
+
+    .nav-list{
+        display: block;
+        position: absolute;
+        height: 60vh;
+        width: 200px;
+        background-color: gray;
+        padding: 4px 10px;
+        top:55px;
+        right:0px;
+        display: flex;
+        flex-direction: column;
+        transition: ease-in-out .5s;
+    }
+    .nav-list li{
+        border-bottom: 1px solid lightgray;
+        text-align: start;
+        transition: ease-in-out .5s;
+    }
+
+    .nav-list-disable{
+        right: -200px;
+        transition: ease-in-out .5s;
+
+    }
+    .menu-bar{
+        display:block ;
+    }
+    
 }
 
 /* Home */
@@ -156,7 +192,7 @@ nav div span{
 
 }
 .home-section div a:last-child:hover{
-    color: rgb(21, 21, 100);
+    background-color: rgb(21, 21, 100);
 
 }
 
@@ -175,13 +211,13 @@ nav div span{
     display: flex;
     flex-direction: column;
     align-items: center;
- 
     gap: 10px;
 }
 .feature-section h1{
- 
+ text-align: center;
 }
 .feature-section p{
+    text-align: center;
     font-size: 18px;
     font-weight: 400;
 
@@ -231,6 +267,9 @@ align-items: center;
 justify-content: center;
 gap: 10px;
 }
+.popular-section h1,p{
+   text-align: center;
+}
 
 .courses{
     margin-top: 20px;
@@ -243,6 +282,7 @@ gap: 10px;
     gap: 20px;
     
 }
+
 
 .courses div{
     margin-top: 20px;
@@ -307,9 +347,9 @@ gap: 10px;
     gap: 20px;
 
 }
-.right-div p{
+
+.right-div h1,p{
     align-items: center;
-    width: 50%;
 }
 
 .left-div{
@@ -354,6 +394,7 @@ gap: 10px;
     font-size: 16px;
     border: none;
     border-radius: 4px;
+    cursor: pointer;
     align-self: flex-start;
     padding: 10px 10px;
     transition: ease 0.3s;
@@ -479,7 +520,7 @@ gap: 10px;
 /* Footer */
 
 .footer-section{
-    
+    margin-top: 20px;
     display: flex;
     width: 100%;
     min-height: 50vh;
@@ -507,7 +548,7 @@ gap: 10px;
     display: flex;
     flex-direction: column;
     list-style: none;
-    gap: 5px;
+    gap: 15px;
     color: #fff;
 
 }
@@ -520,6 +561,7 @@ gap: 10px;
 .footer-section div ul li:hover {
     color: #fdc93b;
     cursor: pointer;
+    scale: 1.02;
 
 }
 
@@ -543,8 +585,63 @@ gap: 10px;
     margin-left: -5px;
     padding: 0px 10px;
     border-radius: 0px 5px;
+    transition: ease .2s;
+    cursor: pointer;
+}
+.news-letter div button:hover{
+    background-color: rgb(21, 21, 100);
+    border: 2px solid #fdc93b;
+    color: white;
 }
 
+.contact-copyrights{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact-copyrights .contacts i{
+    border: 2px solid #fdc93b;
+    height: 25px ;
+    animation: none;
+    color: #fdc93b;
+}
+.contact-copyrights .contacts i:hover{
+    color: red;
+}
+
+.copyrights{
+    font-size: 16px;
+    font-weight: 600;
+    margin:auto;
+    padding: 20px;
+}
+.copyrights a {
+    color: aqua;
+    transition: ease .3s;
+    display: flex;
+
+}
+.copyrights a:hover{
+    color: chocolate;
+    
+}
+/* footer media query */
+@media (max-width:920px) {
+
+    .footer-section div{
+        padding: 20px 0px;
+    }
+} 
+@media (max-width:350px) {
+
+    .news-letter div{
+        flex-direction: column;
+    }
+    
+    .news-letter div button{
+        padding: 10px ;
+    }
+} 
 
 /* animation  */
 @keyframes colorChange1 {
@@ -565,10 +662,10 @@ gap: 10px;
     }
 }
 @keyframes colorChange3 {
-    0%,10%,20%,30%,40%,50%,60%,70%,80%,90%{
+    0%,10%,20%,30%,40%,50%,60%,70%,90%,100%{
         
     }
-    100%{
+    80%{
         color: rgb(252, 201, 59);
     }
 }
